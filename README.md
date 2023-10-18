@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 ### Run the project
 
-Remember dataset is given in the data folder for training as-well-as for testing purpose.
+Remember dataset is given in the data folder for training as-well-as for testing purpose. <br>
 Simple run the app.py file.
 
 python app.py
