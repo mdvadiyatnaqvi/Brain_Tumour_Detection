@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brain Tumor Detection</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://source.unsplash.com/1600x900/?landscape');
+      background-size: cover;
+    "
+  >
+    <div class="container">
+      <h1>Brain Tumor Detection</h1>
+      <form method="POST" action="/predict" enctype="multipart/form-data">
+        <label for="image" class="custom-file-upload">
+          <span>Upload MRI Image</span>
+          <input type="file" name="image" id="image" accept="image/*" />
+        </label>
+        <input
+          id="displayButton"
+          type="submit"
+          value="Detect Tumor"
+          class="btn"
+        />
+      </form>
+      <div class="result">
+        {% if result %}
+        <p>Result: {{ result }}</p>
+        {%endif %}
+      </div>
+    </div>
+  </body>
+</html>
